@@ -1,4 +1,5 @@
-require './lib/*'
+# require './lib/*'
+Dir["./lib/*.rb"].each {|file| require file }
 
 pokemon_scraper = Generic_pokemon.new('http://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number#Generation_I')
 
