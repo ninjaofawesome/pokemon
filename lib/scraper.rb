@@ -9,10 +9,11 @@ class Generic_pokemon
 	def initialize(url)
 		download = open(url) #you don't need this outside of initialize, so it can be local.
 		@html = Nokogiri::HTML(download)
+		#puts @html
 	end
 
 	def get_pokemon_name
-		puts bulbasaur = html.search("toctitle tr")
+		html.search("#mw-content-text table")[2].search("tr")[1].search("td")[3].search("a")[0].content
 	end
 
 

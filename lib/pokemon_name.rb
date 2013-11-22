@@ -1,6 +1,6 @@
 require 'open-uri' 
 require 'nokogiri' 
-require './scraper.rb'
+# require './scraper.rb'
 
 class Bulbasaur
 
@@ -11,10 +11,13 @@ class Bulbasaur
 	end
 
 	def say_name
-		puts "my name is #{get_pokemon_name}!"
+		puts "my name is #{name}!"
 	end
+
 
 end
 
+pokemon = Bulbasaur.new("Bulbasaur")
 
-puts Bulbasaur.say_name
+puts pokemon.say_name
+
